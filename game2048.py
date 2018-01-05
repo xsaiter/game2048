@@ -143,6 +143,10 @@ class MainWindow(tk.Frame):
             self.update_cell(destination, value)
             self.moved = True
 
+    def gen_if(self):
+        if self.moved is True:
+            self.gen()
+
     def gen(self):
         if not self.no_empty_cells():
             while True:
@@ -153,10 +157,6 @@ class MainWindow(tk.Frame):
 
         if self.game_over():
             self.update_status_bar("game over!")
-
-    def gen_if(self):
-        if self.moved is True:
-            self.gen()
 
     def game_over(self):
         return self.no_empty_cells() and self.no_moves()
