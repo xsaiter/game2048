@@ -194,7 +194,7 @@ class MainWindow(tk.Frame):
         self.score += value
         self.info_bar["text"] = "score: {0}".format(self.score)
 
-    def update_status_bar(self, text):
+    def update_status_bar(self, text):        
         self.status_bar["text"] = text
 
 
